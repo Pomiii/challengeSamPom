@@ -5,7 +5,7 @@ public class ChallengeList {
   */
   public static double moyenne(int a, int b){
 
-    Scanner saisie = new Scanner(System.in);
+    java.util.Scanner saisie = new Scanner(System.in);
 
     double moyenneA;
 
