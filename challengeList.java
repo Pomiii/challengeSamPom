@@ -14,7 +14,7 @@ public class ChallengeList {
   * retourn le perimetre d'un carre de cÃ´tÃ© a
   */
   public static int perimetreCarre(int a){
-    Pom est là
+    //Pom est là
     // TODO @B
     return 0;
   }
