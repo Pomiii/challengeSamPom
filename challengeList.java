@@ -7,9 +7,7 @@ public class ChallengeList {
 
     return (a+b)/2;
 
-
     // TODO @A
-    return 0;
   }
 
   /**
