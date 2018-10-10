@@ -5,17 +5,7 @@ public class ChallengeList {
   */
   public static double moyenne(int a, int b){
 
-    java.util.Scanner saisie = new Scanner(System.in);
-
-    double moyenneA;
-
-    System.out.print("Saisissez un nombre : ");
-    a = saisie.nextInt();
-
-    System.out.print("Saisissez un nombre : ");
-    b = saisie.nextInt();
-
-    moyenneA = (a+b)/2;
+    return (a+b)/2;
 
 
     // TODO @A
