@@ -9,11 +9,11 @@ public class ChallengeListTest{
 
 
   public static void testMoyenne(){
-    assertEquals("Moyenne 2 entiers positifs", 16, ChallengeList.testMoyenne(4, 28));
-    assertEquals("Moyenne 1 entier positif, 1 entier négatif", -12, ChallengeList.testMoyenne(4, -28));
-    assertEquals("Moyenne 1 entier négatif, 1 entier positif", 12, ChallengeList.testMoyenne(-4, 28));
-    assertEquals("Moyenne 1 entier négatif, 1 entier positif égaux", 0, ChallengeList.testMoyenne(-4, 4));
-    assertEquals("Moyenne 2 entiers négatifs", -16, ChallengeList.testMoyenne(-4, -28));
+    assertEquals("Moyenne 2 entiers positifs", 16, ChallengeList.moyenne(4, 28));
+    assertEquals("Moyenne 1 entier positif, 1 entier négatif", -12, ChallengeList.moyenne(4, -28));
+    assertEquals("Moyenne 1 entier négatif, 1 entier positif", 12, ChallengeList.moyenne(-4, 28));
+    assertEquals("Moyenne 1 entier négatif, 1 entier positif égaux", 0, ChallengeList.moyenne(-4, 4));
+    assertEquals("Moyenne 2 entiers négatifs", -16, ChallengeList.moyenne(-4, -28));
   }
 
   public static void testPerimetreCarre(){
