@@ -4,10 +4,10 @@ public class ChallengeList {
   * retourne la moyenne de a et de b
   */
   public static double moyenne(int a, int b){
-    
+
     Scanner saisie = new Scanner(System.in);
 
-    double moyenne;
+    double moyenneA;
 
     System.out.print("Saisissez un nombre : ");
     a = saisie.nextInt();
@@ -15,7 +15,7 @@ public class ChallengeList {
     System.out.print("Saisissez un nombre : ");
     b = saisie.nextInt();
 
-    moyenne = (a+b)/2;
+    moyenneA = (a+b)/2;
 
 
     // TODO @A
