@@ -17,6 +17,10 @@ public class ChallengeListTest{
   }
 
   public static void testPerimetreCarre(){
+    assertEquals("Périmètre carré de 4", 16, ChallengeList.perimetreCarre(4));
+    assertEquals("Périmètre carré de 8", 32, ChallengeList.perimetreCarre(8));
+    assertEquals("Périmètre carré de 12", 48, ChallengeList.perimetreCarre(12));
+    assertEquals("Périmètre carré de 16", 64, ChallengeList.perimetreCarre(16));
     // TODO @A
   }
 
