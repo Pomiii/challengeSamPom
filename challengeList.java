@@ -3,7 +3,21 @@ public class ChallengeList {
   /**
   * retourne la moyenne de a et de b
   */
-  public static int moyenne(int a, int b){
+  public static double moyenne(int a, int b){
+    
+    Scanner saisie = new Scanner(System.in);
+
+    double moyenne;
+
+    System.out.print("Saisissez un nombre : ");
+    a = saisie.nextInt();
+
+    System.out.print("Saisissez un nombre : ");
+    b = saisie.nextInt();
+
+    moyenne = (a+b)/2;
+
+
     // TODO @A
     return 0;
   }
