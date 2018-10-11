@@ -26,7 +26,7 @@ public class ChallengeList {
   * ex "ABCDDFAB" : true
   */
   public static boolean commenceFini(String mot){
-    if (mot.length(0,1) == mot.length(-1))
+    //if (mot.length(0,1) == mot.length(-1))
     // TODO @A
     return false;
   }
