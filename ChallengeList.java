@@ -38,11 +38,9 @@ public class ChallengeList {
 
     char[] tableau = new char[mot.length()];
     tableau = mot.split(" ");
-    char uneLettre = tableau[i];
-    char lettreSuivante = tableau[i+1];
 
     for (int i = 0; i < mot.length()-1; i++) {
-      if (lettreSuivante.equals(uneLettre)) {
+      if (tableau[i+1].equals(tableau[i])) {
         return false;
       }
       else {
@@ -108,9 +106,10 @@ public class ChallengeList {
   **/
   public static String[] filtreLetter(String[] noms, char lettre){
     String[] resultat = new String[];
+    String leNom;
 
     for (int i = 0; i < noms.length(); i++) {
-      String leNom = noms[i];
+      leNom = noms[i];
       if (leNom[0].equals(lettre)) {
         resultat[i] = leNom;
       }
