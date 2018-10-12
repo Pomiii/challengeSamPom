@@ -38,7 +38,19 @@ public class ChallengeList {
   */
   public static boolean nonMonotone(String mot){
     // TODO @B
-    return false;
+    char[] tableau = new char[mot.length()];
+    tableau = mot.split(" ");
+
+    for (int i = 0; i < mot.length()-1; i++) {
+      if (char[i+1].equals(char[i])) {
+        return false;
+      }
+      else {
+        return true;
+      }
+      
+    }
+
   }
 
   /**
