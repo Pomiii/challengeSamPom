@@ -17,8 +17,6 @@ public class ChallengeList {
 
     return a*4;
 
-    // TODO @B
-
   }
 
   /**
@@ -37,7 +35,7 @@ public class ChallengeList {
   * "AAAHAA" : true
   */
   public static boolean nonMonotone(String mot){
-    // TODO @B
+
     char[] tableau = new char[mot.length()];
     tableau = mot.split(" ");
 
@@ -48,7 +46,7 @@ public class ChallengeList {
       else {
         return true;
       }
-      
+
     }
 
   }
@@ -74,8 +72,25 @@ public class ChallengeList {
   * "erreur" si la tempÃ©rature est infÃ©rieure Ã  -274
   **/
   public static String caGele(int temperature){
-    // TODO @B
-    return null;
+
+    String message;
+    if (temperature < 0) {
+       message = "ça gèle";
+    }
+    if (0 < temperature && temperature < 5) {
+      message = "ça caille";
+    }
+    if (5 < temperature && temperature < 90) {
+      message = "RAS";
+    }
+    if (90 < temperature) {
+      message = "ça bouille";
+    }
+    if (temperature < -274) {
+      message = "Erreur";
+    }
+    
+    return message;
   }
 
   /**
