@@ -25,7 +25,11 @@ public class ChallengeListTest{
   }
 
   public static void testCommenceFini(){
-    // TODO @B
+    assertEquals("Cela commence et fini pareil (Majuscule au début)", true, ChallengeList.commenceFini("Eve"));
+    assertEquals("Cela commence et fini pareil (Majuscule à la fin)", true, ChallengeList.commenceFini("evE"));
+    assertEquals("Cela commence et fini pareil (Majuscules)", true, ChallengeList.commenceFini("EvE"));
+    assertEquals("Cela commence et fini pareil (minuscule)", true, ChallengeList.commenceFini("eve"));
+    assertEquals("Cela commence et fini différemment", false, ChallengeList.commenceFini("Eva"));
   }
 
   public static void testNonMonotone(){
@@ -33,10 +37,10 @@ public class ChallengeListTest{
   }
 
   public static void testTarif(){
-    assertEquals("Tarif", "gratuit", ChallengeList.tarif(2));
-    assertEquals("Tarif", "reduit", ChallengeList.tarif(6));
-    assertEquals("Tarif", "plein", ChallengeList.tarif(24));
-    assertEquals("Tarif", "erreur", ChallengeList.tarif(-2));
+    assertEquals("Tarif moins de trois ans", "gratuit", ChallengeList.tarif(2));
+    assertEquals("Tarif entre 3 ans et 12 ans", "reduit", ChallengeList.tarif(6));
+    assertEquals("Tarif pour les plus de 12 ans", "plein", ChallengeList.tarif(24));
+    assertEquals("Tarif pour les âges négatifs", "erreur", ChallengeList.tarif(-2));
   }
 
   public static void testCaGele(){
@@ -44,7 +48,8 @@ public class ChallengeListTest{
   }
 
   public static void testFiltreShort(){
-    // TODO @B
+    assertEquals("Filtre des mots de moins de trois caractères", "chat cours dans pré", ChallengeList.filtreShort("Le chat cours dans le pré"));
+    assertEquals("Filtre des mots de moins de trois caractères", "dans par pour avec chez", ChallengeList.filtreShort("a de dans par pour avec chez"));
   }
 
   public static void testFiltreLetter(){
