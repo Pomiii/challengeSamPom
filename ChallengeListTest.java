@@ -25,11 +25,11 @@ public class ChallengeListTest{
   }
 
   public static void testCommenceFini(){
-    assertEquals("Cela commence et fini pareil (Majuscule au début)", true, ChallengeList.commenceFini("Eve"));
-    assertEquals("Cela commence et fini pareil (Majuscule à la fin)", true, ChallengeList.commenceFini("evE"));
-    assertEquals("Cela commence et fini pareil (Majuscules)", true, ChallengeList.commenceFini("EvE"));
-    assertEquals("Cela commence et fini pareil (minuscule)", true, ChallengeList.commenceFini("eve"));
-    assertEquals("Cela commence et fini différemment", false, ChallengeList.commenceFini("Eva"));
+    assertTrue("Cela commence et fini pareil (Majuscule au début)", ChallengeList.commenceFini("Eve"));
+    assertTrue("Cela commence et fini pareil (Majuscule à la fin)", ChallengeList.commenceFini("evE"));
+    assertTrue("Cela commence et fini pareil (Majuscules)", ChallengeList.commenceFini("EvE"));
+    assertTrue("Cela commence et fini pareil (minuscule)", ChallengeList.commenceFini("eve"));
+    assertTrue("Cela commence et fini différemment", ChallengeList.commenceFini("Eva"));
   }
 
   public static void testNonMonotone(){
