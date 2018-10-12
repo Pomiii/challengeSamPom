@@ -33,7 +33,10 @@ public class ChallengeListTest{
   }
 
   public static void testTarif(){
-    // TODO @B
+    assertEquals("Tarif", "gratuit", ChallengeList.tarif(2));
+    assertEquals("Tarif", "reduit", ChallengeList.tarif(6));
+    assertEquals("Tarif", "plein", ChallengeList.tarif(24));
+    assertEquals("Tarif", "erreur", ChallengeList.tarif(-2));
   }
 
   public static void testCaGele(){
