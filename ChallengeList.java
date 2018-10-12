@@ -89,7 +89,7 @@ public class ChallengeList {
     if (temperature < -274) {
       message = "Erreur";
     }
-    
+
     return message;
   }
 
@@ -105,8 +105,16 @@ public class ChallengeList {
   * parcourt le tableau de noms et retourne une liste de tous les noms qui commencent par lettre
   **/
   public static String[] filtreLetter(String[] noms, char lettre){
-    // TODO @B
-    return null;
+    String[] resultat = new String[];
+
+    for (int i = 0; i < noms.length(); i++) {
+      String leNom = noms[i];
+      if (leNom[0].equals(lettre)) {
+        resultat[i] = leNom;
+      }
+    }
+
+    return resultat;
   }
 
 
