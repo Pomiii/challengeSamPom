@@ -36,19 +36,20 @@ public class ChallengeList {
   */
   public static boolean nonMonotone(String mot){
 
-    char[] tableau = new char[mot.length()];
+    String[] tableau = new String[mot.length()];
     tableau = mot.split(" ");
+    boolean test = true;
 
     for (int i = 0; i < mot.length()-1; i++) {
       if (tableau[i+1].equals(tableau[i])) {
-        return false;
+        test = false;
       }
       else {
-        return true;
+        test = true;
       }
 
     }
-
+    return test;
   }
 
   /**
@@ -73,7 +74,7 @@ public class ChallengeList {
   **/
   public static String caGele(int temperature){
 
-    String message;
+    String message = "";
     if (temperature < 0) {
        message = "ça gèle";
     }
@@ -105,13 +106,11 @@ public class ChallengeList {
   * parcourt le tableau de noms et retourne une liste de tous les noms qui commencent par lettre
   **/
   public static String[] filtreLetter(String[] noms, char lettre){
-    String[] resultat = new String[];
-    String leNom;
+    String[] resultat = new String[noms.length];
 
-    for (int i = 0; i < noms.length(); i++) {
-      leNom = noms[i];
-      if (leNom[0].equals(lettre)) {
-        resultat[i] = leNom;
+    for (int i = 0; i < noms.length; i++) {
+      if (noms[i].equals(lettre)) {
+        resultat[i] = noms[i];
       }
     }
 
