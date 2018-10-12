@@ -90,6 +90,15 @@ public class ChallengeListTest{
     }
   }
 
+  public static void assertEquals(String message, String expected, String res){
+    if (res.equals(expected)) {
+      System.out.println("\nOK >> "+message);
+    }
+    else {
+      throw new Error("\nKO!! >> "+message+" (exp : "+expected+", res : "+res+")");
+    }
+  }
+
   public static void assertEquals(String message, double expected, double res){
     if (Math.abs(expected-res) < 0.0001) {
       System.out.println("\nOK >> "+message);
