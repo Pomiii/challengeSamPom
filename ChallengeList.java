@@ -38,9 +38,11 @@ public class ChallengeList {
 
     char[] tableau = new char[mot.length()];
     tableau = mot.split(" ");
+    char uneLettre = char[i];
+    char lettreSuivante = char[i+1];
 
     for (int i = 0; i < mot.length()-1; i++) {
-      if (char[i+1].equals(char[i])) {
+      if (lettreSuivante.equals(uneLettre)) {
         return false;
       }
       else {
