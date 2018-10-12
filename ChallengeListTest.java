@@ -48,8 +48,14 @@ public class ChallengeListTest{
   }
 
   public static void testFiltreShort(){
-    assertEquals("Filtre des mots de moins de trois caractères", "chat cours dans pré", ChallengeList.filtreShort("Le chat cours dans le pré"));
-    assertEquals("Filtre des mots de moins de trois caractères", "dans par pour avec chez", ChallengeList.filtreShort("a de dans par pour avec chez"));
+    String[] noms1 = {"Le", "chat", "cours", "dans", "le", "pré"};
+    String[] res1 = {"chat","cours","dans","pré"};
+    String[] noms2 = {"a", "de", "dans", "par", "pour", "avec", "chez"};
+    String[] res2 = {"dans","par","pour","avec","chez"};
+
+    assertEquals("Filtre des mots de moins de trois caractères", res1, ChallengeList.filtreShort(noms1));
+    assertEquals("Filtre des mots de moins de trois caractères", res2, ChallengeList.filtreShort(noms2));
+    
   }
 
   public static void testFiltreLetter(){
